@@ -48,6 +48,7 @@ const (
 	// space
 	LunarDistance    = Kilometer * 384400
 	AstronomicalUnit = Meter * 149597870700
+	LightYear        = Meter * 9460730472580800
 )
 
 // Yoctometers returns the length in ym
@@ -228,4 +229,9 @@ func (l Length) LunarDistances() float64 {
 // AstronomicalUnits returns the length in au
 func (l Length) AstronomicalUnits() float64 {
 	return float64(l / AstronomicalUnit)
+}
+
+// LightYears returns the length in ly
+func (l Length) LightYears() float64 {
+	return float64(l / LightYears)
 }
