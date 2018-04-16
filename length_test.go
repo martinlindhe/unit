@@ -58,4 +58,5 @@ func TestLength(t *testing.T) {
 	// space
 	assert.Equal(t, 389.17240036420395, (1 * AstronomicalUnit).LunarDistances())
 	assert.Equal(t, 0.0025695552897999903, (1 * LunarDistance).AstronomicalUnits())
+	assert.Equal(t, 63241.07708426628, (1 * LightYear).AstronomicalUnits())
 }

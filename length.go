@@ -233,5 +233,5 @@ func (l Length) AstronomicalUnits() float64 {
 
 // LightYears returns the length in ly
 func (l Length) LightYears() float64 {
-	return float64(l / LightYears)
+	return float64(l / LightYear)
 }
