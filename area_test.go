@@ -2,53 +2,51 @@ package unit
 
 import (
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestArea(t *testing.T) {
 
 	// SI
-	assert.Equal(t, 1.0000000000000001e6, (1 * SquareZeptometer).SquareYoctometers()) // round error, expected 1e6
-	assert.Equal(t, 999999.9999999999, (1 * SquareAttometer).SquareZeptometers())     // round error, expected 1e6
-	assert.Equal(t, 1.0000000000000001e6, (1 * SquareFemtometer).SquareAttometers())  // round error, expected 1e6
-	assert.Equal(t, 999999.9999999999, (1 * SquarePicometer).SquareFemtometers())     // round error, expected 1e6
-	assert.Equal(t, 1.0000000000000001e6, (1 * SquareNanometer).SquarePicometers())   // round error, expected 1e6
-	assert.Equal(t, 999999.9999999999, (1 * SquareMicrometer).SquareNanometers())     // round error, expected 1e6
-	assert.Equal(t, 1e6, (1 * SquareMillimeter).SquareMicrometers())
-	assert.Equal(t, 1e6, (1 * SquareMeter).SquareMillimeters())
+	assertFloatEqual(t, 1e6, (1 * SquareZeptometer).SquareYoctometers())
+	assertFloatEqual(t, 1e6, (1 * SquareAttometer).SquareZeptometers())
+	assertFloatEqual(t, 1e6, (1 * SquareFemtometer).SquareAttometers())
+	assertFloatEqual(t, 1e6, (1 * SquarePicometer).SquareFemtometers())
+	assertFloatEqual(t, 1e6, (1 * SquareNanometer).SquarePicometers())
+	assertFloatEqual(t, 1e6, (1 * SquareMicrometer).SquareNanometers())
+	assertFloatEqual(t, 1e6, (1 * SquareMillimeter).SquareMicrometers())
+	assertFloatEqual(t, 1e6, (1 * SquareMeter).SquareMillimeters())
 
-	assert.Equal(t, 1e4, (1 * SquareMeter).SquareCentimeters())
-	assert.Equal(t, 1e2, (1 * SquareMeter).SquareDecimeters())
-	assert.Equal(t, 1e0, (1 * SquareMeter).SquareMeters())
-	assert.Equal(t, 1e-2, (1 * SquareMeter).SquareDecameter())
-	assert.Equal(t, 1e-4, (1 * SquareMeter).SquareHectometer())
+	assertFloatEqual(t, 1e4, (1 * SquareMeter).SquareCentimeters())
+	assertFloatEqual(t, 1e2, (1 * SquareMeter).SquareDecimeters())
+	assertFloatEqual(t, 1e0, (1 * SquareMeter).SquareMeters())
+	assertFloatEqual(t, 1e-2, (1 * SquareMeter).SquareDecameter())
+	assertFloatEqual(t, 1e-4, (1 * SquareMeter).SquareHectometer())
 
-	assert.Equal(t, 1e-6, (1 * SquareMeter).SquareKilometers())
-	assert.Equal(t, 1e-6, (1 * SquareKilometer).SquareMegameters())
-	assert.Equal(t, 1e-6, (1 * SquareMegameter).SquareGigameters())
-	assert.Equal(t, 1e-6, (1 * SquareGigameter).SquareTerameters())
-	assert.Equal(t, 1e-6, (1 * SquareTerameter).SquarePetameters())
-	assert.Equal(t, 1e-6, (1 * SquarePetameter).SquareExameters())
-	assert.Equal(t, 1e-6, (1 * SquareExameter).SquareZettameters())
-	assert.Equal(t, 1e-6, (1 * SquareZettameter).SquareYottameters())
+	assertFloatEqual(t, 1e-6, (1 * SquareMeter).SquareKilometers())
+	assertFloatEqual(t, 1e-6, (1 * SquareKilometer).SquareMegameters())
+	assertFloatEqual(t, 1e-6, (1 * SquareMegameter).SquareGigameters())
+	assertFloatEqual(t, 1e-6, (1 * SquareGigameter).SquareTerameters())
+	assertFloatEqual(t, 1e-6, (1 * SquareTerameter).SquarePetameters())
+	assertFloatEqual(t, 1e-6, (1 * SquarePetameter).SquareExameters())
+	assertFloatEqual(t, 1e-6, (1 * SquareExameter).SquareZettameters())
+	assertFloatEqual(t, 1e-6, (1 * SquareZettameter).SquareYottameters())
 
 	// US
-	assert.Equal(t, 10.763910416709724, (1 * SquareMeter).SquareFeet())
-	assert.Equal(t, 144.0, (1 * SquareFoot).SquareInches())
-	assert.Equal(t, 9.0, (1 * SquareYard).SquareFeet())
-	assert.Equal(t, 4840.0, (1 * Acre).SquareYards())
-	assert.Equal(t, 640.0, (1 * SquareMile).Acres())
-	assert.Equal(t, 0.0015624999999999999, (1 * Acre).SquareMiles())
+	assertFloatEqual(t, 10.763910416709724, (1 * SquareMeter).SquareFeet())
+	assertFloatEqual(t, 144.0, (1 * SquareFoot).SquareInches())
+	assertFloatEqual(t, 9.0, (1 * SquareYard).SquareFeet())
+	assertFloatEqual(t, 4840.0, (1 * Acre).SquareYards())
+	assertFloatEqual(t, 640.0, (1 * SquareMile).Acres())
+	assertFloatEqual(t, 0.0015625, (1 * Acre).SquareMiles())
 
 	// imperial
-	assert.Equal(t, 25.29285264, (1 * SquareRod).SquareMeters())
-	assert.Equal(t, 1011.7141055999998, (1 * Rood).SquareMeters())
-	assert.Equal(t, 0.025000000000000005, (1 * SquareRod).Roods())
+	assertFloatEqual(t, 25.29285264, (1 * SquareRod).SquareMeters())
+	assertFloatEqual(t, 1011.7141055999998, (1 * Rood).SquareMeters())
+	assertFloatEqual(t, 0.025, (1 * SquareRod).Roods())
 
 	// aliases
-	assert.Equal(t, 1.0, (1 * SquareMeter).Centiares())
-	assert.Equal(t, 1.0, (1 * SquareDecameter).Ares())
-	assert.Equal(t, 1.0, (1 * SquareHectometer).Hectares())
-	assert.Equal(t, 1.0, (1 * SquarePerch).SquareRods())
+	assertFloatEqual(t, 1.0, (1 * SquareMeter).Centiares())
+	assertFloatEqual(t, 1.0, (1 * SquareDecameter).Ares())
+	assertFloatEqual(t, 1.0, (1 * SquareHectometer).Hectares())
+	assertFloatEqual(t, 1.0, (1 * SquarePerch).SquareRods())
 }
