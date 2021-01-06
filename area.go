@@ -35,6 +35,16 @@ const (
 	Acre       = SquareYard * 4840
 	SquareMile = Acre * 640
 
+	// TW
+	//1坪(twPing)= 3.30579 平方公尺
+	//1公頃(hectare,twGongQing)= 10000 平方公尺
+	//1甲(twJia)= 2934*3.30579 平方公尺
+	//1分(twFen)= 293.4*3.30579 平方公尺
+	TWGongQing = SquareMeter * 10000
+	TWPing     = SquareMeter / 3.30579
+	TWFen      = SquareMeter / (293.4 * 3.30579)
+	TWJia      = SquareMeter / (2934 * 3.30579)
+
 	// imperial
 	SquareRod = SquareFoot * 272.25
 	Rood      = SquareYard * 1210
