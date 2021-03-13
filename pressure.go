@@ -55,6 +55,7 @@ const (
 	TechAtmosphere      = Pascal * 9.80665 * 1e4
 	Torr                = Pascal * 133.3224
 	PoundsPerSquareInch = Pascal * 6.8948 * 1e3
+	InchOfMercury       = Pascal * 3386.389
 )
 
 // Yoctopascals returns the pressure in yPa
@@ -285,4 +286,9 @@ func (p Pressure) Torrs() float64 {
 // PoundsPerSquareInch returns the pressure in psi
 func (p Pressure) PoundsPerSquareInch() float64 {
 	return float64(p / PoundsPerSquareInch)
+}
+
+// InchOfMercury returns the pressure in inch of mercury
+func (p Pressure) InchOfMercury() float64 {
+	return float64(p / InchOfMercury)
 }
