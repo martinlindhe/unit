@@ -57,4 +57,7 @@ func TestLength(t *testing.T) {
 	assertFloatEqual(t, 389.17240036420395, (1 * AstronomicalUnit).LunarDistances())
 	assertFloatEqual(t, 0.0025695552897999903, (1 * LunarDistance).AstronomicalUnits())
 	assertFloatEqual(t, 63241.07708426628, (1 * LightYear).AstronomicalUnits())
+
+	// chemistry
+	assertFloatEqual(t, 1e-10, (1 * Angstrom).Meters())
 }
