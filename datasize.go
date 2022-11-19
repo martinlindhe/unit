@@ -6,25 +6,29 @@ type Datasize Unit
 // ...
 const (
 	// base 10 (SI prefixes)
-	Bit      Datasize = 1e0
-	Kilobit           = Bit * 1e3
-	Megabit           = Bit * 1e6
-	Gigabit           = Bit * 1e9
-	Terabit           = Bit * 1e12
-	Petabit           = Bit * 1e15
-	Exabit            = Bit * 1e18
-	Zettabit          = Bit * 1e21
-	Yottabit          = Bit * 1e24
+	Bit       Datasize = 1e0
+	Kilobit            = Bit * 1e3
+	Megabit            = Bit * 1e6
+	Gigabit            = Bit * 1e9
+	Terabit            = Bit * 1e12
+	Petabit            = Bit * 1e15
+	Exabit             = Bit * 1e18
+	Zettabit           = Bit * 1e21
+	Yottabit           = Bit * 1e24
+	Ronnabit           = Bit * 1e27
+	Quettabit          = Bit * 1e30
 
-	Byte      = Bit * 8
-	Kilobyte  = Byte * 1e3
-	Megabyte  = Byte * 1e6
-	Gigabyte  = Byte * 1e9
-	Terabyte  = Byte * 1e12
-	Petabyte  = Byte * 1e15
-	Exabyte   = Byte * 1e18
-	Zettabyte = Byte * 1e21
-	Yottabyte = Byte * 1e24
+	Byte       = Bit * 8
+	Kilobyte   = Byte * 1e3
+	Megabyte   = Byte * 1e6
+	Gigabyte   = Byte * 1e9
+	Terabyte   = Byte * 1e12
+	Petabyte   = Byte * 1e15
+	Exabyte    = Byte * 1e18
+	Zettabyte  = Byte * 1e21
+	Yottabyte  = Byte * 1e24
+	Ronnabyte  = Byte * 1e27
+	Quettabyte = Byte * 1e30
 
 	// base 2 (IEC prefixes)
 	Kibibit = Bit * 1024
@@ -91,6 +95,16 @@ func (b Datasize) Yottabits() float64 {
 	return float64(b / Yottabit)
 }
 
+// Ronnabits returns the datasize in Rbit
+func (b Datasize) Ronnabits() float64 {
+	return float64(b / Ronnabit)
+}
+
+// Quettabits returns the datasize in Qbit
+func (b Datasize) Quettabits() float64 {
+	return float64(b / Quettabit)
+}
+
 // Bytes returns the datasize in B
 func (b Datasize) Bytes() float64 {
 	return float64(b / Byte)
@@ -134,6 +148,16 @@ func (b Datasize) Zettabytes() float64 {
 // Yottabytes returns the datasize in YB
 func (b Datasize) Yottabytes() float64 {
 	return float64(b / Yottabyte)
+}
+
+// Ronnabytes returns the datasize in RB
+func (b Datasize) Ronnabytes() float64 {
+	return float64(b / Ronnabyte)
+}
+
+// Quettabytes returns the datasize in RB
+func (b Datasize) Quettabytes() float64 {
+	return float64(b / Quettabyte)
 }
 
 // Kibibits returns the datasize in Kibit

@@ -6,27 +6,29 @@ type Mass Unit
 // ...
 const (
 	// SI
-	Yoctogram      = Gram * 1e-24
-	Zeptogram      = Gram * 1e-21
-	Attogram       = Gram * 1e-18
-	Femtogram      = Gram * 1e-15
-	Picogram       = Gram * 1e-12
-	Nanogram       = Gram * 1e-9
-	Microgram      = Gram * 1e-6
-	Milligram      = Gram * 1e-3
-	Centigram      = Gram * 1e-2
-	Decigram       = Gram * 1e-1
-	Gram           = Kilogram * 1e-3
-	Decagram       = Gram * 1e1
-	Hectogram      = Gram * 1e2
-	Kilogram  Mass = 1e0
-	Megagram       = Gram * 1e6
-	Gigagram       = Gram * 1e9
-	Teragram       = Gram * 1e12
-	Petagram       = Gram * 1e15
-	Exagram        = Gram * 1e18
-	Zettagram      = Gram * 1e21
-	Yottagram      = Gram * 1e24
+	Yoctogram       = Gram * 1e-24
+	Zeptogram       = Gram * 1e-21
+	Attogram        = Gram * 1e-18
+	Femtogram       = Gram * 1e-15
+	Picogram        = Gram * 1e-12
+	Nanogram        = Gram * 1e-9
+	Microgram       = Gram * 1e-6
+	Milligram       = Gram * 1e-3
+	Centigram       = Gram * 1e-2
+	Decigram        = Gram * 1e-1
+	Gram            = Kilogram * 1e-3
+	Decagram        = Gram * 1e1
+	Hectogram       = Gram * 1e2
+	Kilogram   Mass = 1e0
+	Megagram        = Gram * 1e6
+	Gigagram        = Gram * 1e9
+	Teragram        = Gram * 1e12
+	Petagram        = Gram * 1e15
+	Exagram         = Gram * 1e18
+	Zettagram       = Gram * 1e21
+	Yottagram       = Gram * 1e24
+	Ronnagram       = Gram * 1e27
+	Quettagram      = Gram * 1e30
 
 	// non-SI
 	Tonne     = Megagram
@@ -161,6 +163,16 @@ func (m Mass) Zettagrams() float64 {
 // Yottagrams returns the mass in Yg
 func (m Mass) Yottagrams() float64 {
 	return float64(m / Yottagram)
+}
+
+// Ronnagrams returns the mass in Rg
+func (m Mass) Ronnagrams() float64 {
+	return float64(m / Ronnagram)
+}
+
+// Quettagrams returns the mass in Qg
+func (m Mass) Quettagrams() float64 {
+	return float64(m / Quettagram)
 }
 
 // Tonnes returns the mass in t

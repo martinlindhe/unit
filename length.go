@@ -28,6 +28,8 @@ const (
 	Exameter                = Meter * 1e18
 	Zettameter              = Meter * 1e21
 	Yottameter              = Meter * 1e24
+	Ronnameter              = Meter * 1e27
+	Quettameter             = Meter * 1e30
 
 	// US
 	Inch    = Meter * 0.0254
@@ -162,6 +164,16 @@ func (l Length) Zettameters() float64 {
 // Yottameters returns the length in in Ym
 func (l Length) Yottameters() float64 {
 	return float64(l / Yottameter)
+}
+
+// Ronnameters returns the length in in Rm
+func (l Length) Ronnameters() float64 {
+	return float64(l / Ronnameter)
+}
+
+// Quettameters returns the length in in Qm
+func (l Length) Quettameters() float64 {
+	return float64(l / Quettameter)
 }
 
 // Inches returns the length in in
