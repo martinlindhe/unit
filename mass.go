@@ -1,6 +1,6 @@
 package unit
 
-// Mass represents a SI unit of mass (in grams, G)
+// Mass represents a SI unit of mass (in kilograms, kg)
 type Mass Unit
 
 // ...
