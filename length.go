@@ -36,9 +36,9 @@ const (
 	Hand    = Inch * 4
 	Foot    = Inch * 12
 	Yard    = Foot * 3
-	Link    = Chain / 100
 	Rod     = Yard * 5.5
 	Chain   = Rod * 4
+	Link    = Chain / 100
 	Furlong = Chain * 10
 	Mile    = Meter * 1609.344
 
