@@ -10,7 +10,7 @@ const (
 
 	// non-SI
 	Dyne          = Newton * 1e-5
-	KilogramForce = Newton * 9.80665
+	KilogramForce = Newton * Force(StandardGravity)
 	PoundForce    = Newton * 4.448222
 	Poundal       = Newton * 0.138255
 
