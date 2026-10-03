@@ -51,7 +51,7 @@ const (
 	Zettabar = Bar * 1e21
 	Yottabar = Bar * 1e24
 
-	Atmosphere          = Pascal * 1.01325 * 1e5
+	Atmosphere          = Pascal * 101325
 	TechAtmosphere      = Pascal * 9.80665 * 1e4
 	Torr                = Pascal * 133.3224
 	PoundsPerSquareInch = Pascal * 6.8948 * 1e3
