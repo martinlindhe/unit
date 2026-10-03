@@ -155,7 +155,7 @@ func (b Datasize) Ronnabytes() float64 {
 	return float64(b / Ronnabyte)
 }
 
-// Quettabytes returns the datasize in RB
+// Quettabytes returns the datasize in QB
 func (b Datasize) Quettabytes() float64 {
 	return float64(b / Quettabyte)
 }
