@@ -52,7 +52,7 @@ const (
 	Yottaliter = Liter * 1e24
 
 	// US
-	CubicInch    = Liter * 0.016387064
+	CubicInch    = Milliliter * 16.387064
 	CubicFoot    = CubicInch * 1728
 	CubicYard    = CubicFoot * 27
 	CubicMile    = CubicYard * 5451776000
