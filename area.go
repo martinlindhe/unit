@@ -29,7 +29,8 @@ const (
 	SquareYottameter      = SquareMeter * 1e48
 
 	// US
-	SquareInch = SquareMeter * 0.00064516
+	SquareInch = SquareMeter * Area(Inch*Inch)
+
 	SquareFoot = SquareInch * 144
 	SquareYard = SquareFoot * 9
 	Acre       = SquareYard * 4840
