@@ -180,7 +180,7 @@ func (m Mass) Tonnes() float64 {
 	return float64(m / Tonne)
 }
 
-// Kilotonnes returns the mass in ktǂ
+// Kilotonnes returns the mass in kt
 func (m Mass) Kilotonnes() float64 {
 	return float64(m / Kilotonne)
 }
