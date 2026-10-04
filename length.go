@@ -40,7 +40,7 @@ const (
 	Chain   = Rod * 4
 	Link    = Chain / 100
 	Furlong = Chain * 10
-	Mile    = Meter * 1609.344
+	Mile    = Foot * 5280
 
 	// US maritime
 	Fathom       = Foot * 6
