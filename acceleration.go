@@ -5,11 +5,11 @@ type Acceleration Unit
 
 // ...
 const (
-	CentimeterPerSecondSquared              = MeterPerSecondSquared * 1e-2     // SI
-	MeterPerSecondSquared      Acceleration = 1e0                              // SI
-	FootPerSecondSquared                    = MeterPerSecondSquared * 0.304800 // US
-	StandardGravity                         = MeterPerSecondSquared * 9.80665  // space
-	Gal                                     = CentimeterPerSecondSquared       // alias
+	CentimeterPerSecondSquared              = MeterPerSecondSquared * 1e-2         // SI
+	MeterPerSecondSquared      Acceleration = 1e0                                  // SI
+	FootPerSecondSquared                    = MeterPerSecondSquared * 3048 / 10000 // US
+	StandardGravity                         = MeterPerSecondSquared * 9.80665      // space
+	Gal                                     = CentimeterPerSecondSquared           // alias
 )
 
 // CentimetersPerSecondSquared returns the acceleration in cm/s²
