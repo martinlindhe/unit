@@ -42,9 +42,9 @@ const (
 	//1甲(twJia)= 2934*3.30579 平方公尺
 	//1分(twFen)= 293.4*3.30579 平方公尺
 	TWGongQing = SquareMeter * 10000
-	TWPing     = SquareMeter / 3.30579
-	TWFen      = SquareMeter / (293.4 * 3.30579)
-	TWJia      = SquareMeter / (2934 * 3.30579)
+	TWPing     = SquareMeter * 3.30579
+	TWFen      = SquareMeter * (293.4 * 3.30579)
+	TWJia      = SquareMeter * (2934 * 3.30579)
 
 	// imperial
 	SquareRod = SquareFoot * 272.25
