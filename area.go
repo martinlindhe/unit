@@ -36,15 +36,17 @@ const (
 	Acre       = SquareYard * 4840
 	SquareMile = Acre * 640
 
-	// TW
-	//1坪(twPing)= 3.30579 平方公尺
+	// TW — exact SI conversions (Wikipedia "Taiwanese units of measurement")
+	// Multiply then divide (left-associative) so integer literals stay exact;
+	// SquareMeter * (400 / 121) would truncate 400/121 to 3.
+	//1坪(twPing)= 400/121 平方公尺 ≈ 3.306 m²
 	//1公頃(hectare,twGongQing)= 10000 平方公尺
-	//1甲(twJia)= 2934*3.30579 平方公尺
-	//1分(twFen)= 293.4*3.30579 平方公尺
+	//1分(twFen)= 117360/121 平方公尺 ≈ 969.92 m² (= 293.4 ping)
+	//1甲(twJia)= 1173600/121 平方公尺 ≈ 9699.17 m² (= 2934 ping)
 	TWGongQing = SquareMeter * 10000
-	TWPing     = SquareMeter * 3.30579
-	TWFen      = SquareMeter * (293.4 * 3.30579)
-	TWJia      = SquareMeter * (2934 * 3.30579)
+	TWPing     = SquareMeter * 400 / 121
+	TWFen      = SquareMeter * 117360 / 121
+	TWJia      = SquareMeter * 1173600 / 121
 
 	// imperial
 	SquareRod = SquareFoot * 272.25
