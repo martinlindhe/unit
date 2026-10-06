@@ -1,7 +1,5 @@
 # About
 
-[![Travis-CI](https://api.travis-ci.org/martinlindhe/unit.svg)](https://travis-ci.org/martinlindhe/unit)
-[![codecov.io](https://codecov.io/github/martinlindhe/unit/coverage.svg?branch=master)](https://codecov.io/github/martinlindhe/unit?branch=master)
 [![GoDoc](https://godoc.org/github.com/martinlindhe/unit?status.svg)](https://godoc.org/github.com/martinlindhe/unit)
 
 Conversion of unit library for golang
