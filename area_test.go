@@ -2,6 +2,8 @@ package unit
 
 import (
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestArea(t *testing.T) {
@@ -43,6 +45,15 @@ func TestArea(t *testing.T) {
 	assertFloatEqual(t, 25.29285264, (1 * SquareRod).SquareMeters())
 	assertFloatEqual(t, 1011.7141055999998, (1 * Rood).SquareMeters())
 	assertFloatEqual(t, 0.025, (1 * SquareRod).Roods())
+
+	// TW — exact Wikipedia fractions 400/121, 117360/121, 1173600/121
+	assert.InDelta(t, 10000.0, (1 * TWGongQing).SquareMeters(), 1e-9)
+	assert.InDelta(t, 400.0/121.0, (1 * TWPing).SquareMeters(), 1e-9)
+	assert.InDelta(t, 117360.0/121.0, (1 * TWFen).SquareMeters(), 1e-9)
+	assert.InDelta(t, 1173600.0/121.0, (1 * TWJia).SquareMeters(), 1e-9)
+	assert.InDelta(t, 293.4, float64(TWFen/TWPing), 1e-9)
+	assert.InDelta(t, 10.0, float64(TWJia/TWFen), 1e-9)
+	assert.InDelta(t, 1173600.0/121.0/10000.0, (1 * TWJia).Hectares(), 1e-9)
 
 	// aliases
 	assertFloatEqual(t, 1.0, (1 * SquareMeter).Centiares())
