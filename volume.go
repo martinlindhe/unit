@@ -56,7 +56,7 @@ const (
 	CubicFoot    = CubicInch * 1728
 	CubicYard    = CubicFoot * 27
 	CubicMile    = CubicYard * 5451776000
-	CubicFurlong = CubicMile * 0.00195314
+	CubicFurlong = CubicMile / 512
 
 	// imperial liquid
 	ImperialGallon     = Liter * 4.54609
