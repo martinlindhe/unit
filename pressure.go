@@ -54,7 +54,7 @@ const (
 	Atmosphere          = Pascal * 101325
 	TechAtmosphere      = Pascal * 9.80665 * 1e4
 	Torr                = Atmosphere / 760
-	PoundsPerSquareInch = Pascal * 6.8948 * 1e3
+	PoundsPerSquareInch = Pascal * 0.45359237 * 9.80665 / (0.0254 * 0.0254)
 	InchOfMercury       = Pascal * 3386.389
 )
 
