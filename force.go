@@ -11,8 +11,8 @@ const (
 	// non-SI
 	Dyne          = Newton * 1e-5
 	KilogramForce = Newton * Force(StandardGravity)
-	PoundForce    = Newton * 4.448222
-	Poundal       = Newton * 0.138255
+	PoundForce    = Newton * 4.4482216152605 // exact: 0.45359237 kg * 9.80665 m/s²
+	Poundal       = Newton * 0.138254954376  // exact: 0.45359237 kg * 0.3048 m/s²
 
 	// aliases
 	Kilopond = KilogramForce
